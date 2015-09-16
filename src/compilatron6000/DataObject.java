@@ -63,11 +63,72 @@ String outFileName;
  }  // end initializeDataObject()
    
  
+// accessors and mutators:
+ 
+ public void getNumbr(){
+     
+ }
+ public void setNumbr(){
+     
+ } 
  
  
+ public void getNme(){
+     
+ }
+ public void setNme(){
+     
+ } 
  
  
+  public void getHndl(){
+     
+ }
+ public void setHndl(){
+     
+ } 
  
  
+  public void getPth(){
+     
+ }
+ public void setPth(){
+     
+ } 
+ 
+ 
+  public void getClsPath(){
+     
+ }
+ public void setClsPath(){
+     
+ } 
+ 
+ 
+  public void getSrcPath(){
+     
+ }
+ public void setSrcPath(){
+     
+ } 
+ 
+ 
+  public void getStdPath(){
+     
+ }
+ public void setStdPath(){
+     
+ } 
+ 
+ 
+  public void getOutFileName(){
+     
+ }
+ public void setOutFileName(){
+     
+ } 
+ 
+ 
+  
     
 }  // end
