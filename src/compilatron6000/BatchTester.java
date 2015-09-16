@@ -9,22 +9,26 @@ import java.util.*;
 
 public class BatchTester
 {
+    DataObject dataObject; 
 public  BatchTester()
   {
+      
+          dataObject = new DataObject();
+    dataObject = compilatron6000.Compilatron6000.data;
 //  initialize student and class configuration data
-    int studentNumber = 0;
-    String studentName = "blank";
-    String studentHandle = "000000";
+    dataObject.setNumbr(0);
+    dataObject.setNme("blank");
+    dataObject.setHndl("000000");
     String className = "242-1/"; 
     String configFileName = "./configBatch.txt";
 //  System.out.println("configFileName: " + configFileName);
     
-    String path = "C:/java/jdk1.7.0_71/bin";
+    dataObject.setPth("C:/java/jdk1.7.0_71/bin");
 //  set fixed paths and file names:
-    String sourcePath = "./src/src-output";
-    String testDataPath = "./src";
-    String argsFileName = testDataPath + "/args.txt";
-    String testInputFileName = testDataPath + "/TestInput.txt";
+    dataObject.setSrcPath("./src/src-output");
+    dataObject.setTestDataPath("./src");
+    dataObject.setArgsFileName(dataObject.getTestDataPath() + "/args.txt");
+    dataObject.setTestInputFileName( dataObject.getTestDataPath() + "/TestInput.txt");
 /*  make sure set correctly
     System.out.println("path: " + path);
     System.out.println("sourcePath: " + sourcePath);
@@ -49,16 +53,16 @@ public  BatchTester()
 //      System.out.print("scanned config info: ");
         while(inLine.hasNext())
         {
-          studentNumber = inLine.nextInt();
-          studentName = inLine.next();
-          studentHandle = inLine.next();
+          dataObject.numbr = inLine.nextInt();
+          dataObject.nme = inLine.next();
+          dataObject.hndl = inLine.next();
         }
 
 //      set paths and file names:
-        String classPath = "/java/bin/" + className + studentName;
-        String studentPath = sourcePath + "/" + studentName;
-        String inputFileStub = studentPath + "/input";
-        String outputFileName = studentPath + "/output-" + studentName + ".txt";
+        dataObject.setClsPath("/java/bin/" + className + dataObject.nme);
+        dataObject.setStdPath(dataObject.srcPath + "/" + dataObject.nme);
+        dataObject.setInputFileStub(dataObject.stdPath + "/input");
+       dataObject.setOutFileName(dataObject.stdPath + "/output-" + dataObject.nme + ".txt");
 /*      make sure set correctly
         System.out.println("classPath: " + classPath);
         System.out.println("studentPath: " + studentPath);
@@ -66,15 +70,15 @@ public  BatchTester()
         System.out.println("outputFileName: " + outputFileName);
 */
       
-        System.out.println("run #: " + runNumber + " ; studentNumber: " + studentNumber + 
-        "; Name: " + studentName + "; Handle: " + studentHandle);
-        System.out.println("Output goes to: " + outputFileName);
+        System.out.println("run #: " + runNumber + " ; studentNumber: " + dataObject.numbr + 
+        "; Name: " + dataObject.nme + "; Handle: " + dataObject.hndl);
+        System.out.println("Output goes to: " + dataObject.outFileName);
         
 //      run javac compiler - returns 0 on success
 //      Compiler Constructor:
 //      public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, 
 //      String srcPath, String stdPath, String outFileName)
-        Compiler c = new Compiler(compilatron6000.Compilatron6000.data);
+        Compiler c = new Compiler(dataObject);
         int success = c.compileJava();
        
 
@@ -116,7 +120,7 @@ public  BatchTester()
 //      public TestRunner(int numbr, String nme, String hndl, String pth, String clsPath, 
 //      String srcPath, String stdPath, String tstDataPath, String argFileName, 
 //      String tstInputFileName, String inputFileStub, String outFileName)
-        TestRunner r = new TestRunner(runNumber, studentName, studentHandle, path, classPath, sourcePath, studentPath, testDataPath, argsFileName, testInputFileName, inputFileStub, outputFileName);
+        TestRunner r = new TestRunner(dataObject);
         r.runJava();
         runNumber++;
         System.out.println();

@@ -7,12 +7,20 @@ package compilatron6000;
 import java.io.*;
 import java.util.*;
 
-public class SingleTester
-{
-  public SingleTester()
-  {
+public class SingleTester{
+    
+    
+     DataObject dataObject;       
+            
+  public SingleTester(){
 //  initialize student and class configuration data    
     int studentNumber = 0;
+    
+    // is this correct? make the object and then copy?
+    dataObject = new DataObject();
+    dataObject = compilatron6000.Compilatron6000.data;
+    
+    
     int runNumber = 1; 
     String studentName = "blank";
     String studentHandle = "000000";
@@ -74,7 +82,8 @@ public class SingleTester
 //    Compiler Constructor:
 //    public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, 
 //    String srcPath, String stdPath, String outFileName)
-      Compiler c = new Compiler(compilatron6000.Compilatron6000.data);
+      
+      Compiler c = new Compiler(dataObject);
       int success = c.compileJava();
         
 //    Print whether or not compile successful
@@ -92,9 +101,7 @@ public class SingleTester
 //    public TestRunner(int numbr, String nme, String hndl, String pth, String clsPath, 
 //    String srcPath, String stdPath, String tstDataPath, String argFileName, 
 //    String tstInputFileName, String inputFileName, String outFileName)
-      TestRunner r = new TestRunner(runNumber, studentName, studentHandle, path, classPath, 
-      sourcePath, studentPath, testDataPath, argsFileName, testInputFileName, inputFileStub,
-      outputFileName);
+      TestRunner r = new TestRunner(dataObject);
       r.runJava();
       runNumber++;
       System.out.println();
@@ -103,4 +110,6 @@ public class SingleTester
       System.out.println("main IOException");
     }
   }
+
+   
 }

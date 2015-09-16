@@ -20,7 +20,16 @@ String clsPath;
 String srcPath;
 String stdPath;
 String outFileName;  
-    
+
+String testDataPath = "";
+String argsFileName = "";
+String testInputFileName = "";
+String inputFileStub = "";
+String inputFileName = "";
+  int success;
+
+
+
     
   public DataObject(){ 
       
@@ -59,76 +68,117 @@ String outFileName;
             srcPath = "";
             stdPath = "";
             outFileName = "";  
-     
+            testDataPath = "";
+            argsFileName = "";
+            testInputFileName = "";
+            inputFileStub = "";
+            inputFileName = "";
+            success = 64; // no reason, just need to check other code for what the values mean, i don't want to initiallize to a test result number
  }  // end initializeDataObject()
    
+
+ 
  
 // accessors and mutators:
  
  public int getNumbr(){
    return numbr;  
  }
- public void setNumbr(){
-     
+ public void setNumbr(int n){
+   numbr = n;  
  } 
  
  
  public String getNme(){
      return nme;
  }
- public void setNme(){
-     
+ public void setNme(String n){
+    nme = n; 
  } 
  
  
  public String getHndl(){
-      return nme;    
+      return hndl;    
  }
- public void setHndl(){
-     
+ public void setHndl(String h){
+     hndl = h;
  } 
  
  
  public String getPth(){
        return pth;   
  }
- public void setPth(){
-     
+ public void setPth(String p){
+     pth = p;
  } 
  
  
  public String getClsPath(){
       return clsPath;    
  }
- public void setClsPath(){
-     
+ public void setClsPath(String c){
+    clsPath = c; 
  } 
  
  
  public String getSrcPath(){
         return srcPath;  
  }
- public void setSrcPath(){
-     
+ public void setSrcPath(String s){
+   srcPath = s;  
  } 
  
  
  public String getStdPath(){
           return stdPath;
  }
- public void setStdPath(){
-     
+ public void setStdPath(String s){
+    stdPath = s; 
  } 
  
  
  public String getOutFileName(){
      return outFileName;     
  }
- public void setOutFileName(){
-     
+ public void setOutFileName(String o){
+     outFileName = o;
  } 
- 
- 
   
+  public String getTestDataPath(){
+     return testDataPath;     
+ }
+ public void setTestDataPath(String o){
+     testDataPath = o;
+ } 
+  public String getArgsFileName(){
+     return argsFileName;     
+ }
+ public void setArgsFileName(String o){
+     argsFileName = o;
+ } 
+  public String getTestInputFileName(){
+     return testInputFileName;     
+ }
+ public void setTestInputFileName(String o){
+     testInputFileName = o;
+ } 
+  public String getInputFileStub(){
+     return inputFileStub;     
+ }
+ public void setInputFileStub(String o){
+     inputFileStub = o;
+ } 
+  public String getInputFileName(){
+     return inputFileName;     
+ }
+ public void setInputFileName(String o){
+     inputFileName = o;
+ } 
+  public int getSuccess(){
+     return success;     
+ }
+ public void setSuccess(int s){
+     success = s;
+ }   
     
 }  // end

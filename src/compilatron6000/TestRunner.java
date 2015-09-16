@@ -24,22 +24,23 @@ public class TestRunner
   private String inputFileName;
   private String outputFileName;
   private int success;
-    
-  public TestRunner(int numbr, String nme, String hndl, String pth, String clsPath, String srcPath, String stdPath, String tstDataPath, String argFileName, String tstInputFileName, String inFileStub,String outFileName)
+  
+  
+  public TestRunner(DataObject d)
   {
-    number = numbr;
-    name = nme;
-    handle = hndl;
-    path = pth;
-    classPath = clsPath;
-    sourcePath = srcPath;
-    studentPath = stdPath;
-    testDataPath = tstDataPath;
-    argsFileName = argFileName;
-    testInputFileName = tstInputFileName;
-    inputFileStub = inFileStub;
-    outputFileName = outFileName;
-    success = 1;  // Outcome of compilation, success = 0
+    number = d.getNumbr();
+    name = d.getNme();
+    handle = d.getHndl();
+    path = d.getPth();
+    classPath = d.getClsPath();
+    sourcePath = d.getSrcPath();
+    studentPath = d.getStdPath();
+    testDataPath = d.getTestDataPath();
+    argsFileName = d.getArgsFileName();
+    testInputFileName = d.getInputFileName();
+    inputFileStub = d.getInputFileStub();
+    outputFileName = d.getOutFileName();
+    success = d.getSuccess();  // Outcome of compilation, success = 0
   }
 
   public void runJava()
