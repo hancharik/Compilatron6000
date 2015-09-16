@@ -31,9 +31,11 @@ public class Compilatron6000 {
         tv = new CompilatronFrame();
         
         
+
         
         Process process;
 
+        /*
        //test to run cmdxp.exe
         Runtime runtime = Runtime.getRuntime();
         try {
@@ -41,6 +43,7 @@ public class Compilatron6000 {
         } catch (IOException ex) {
             Logger.getLogger(Compilatron6000.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         try {
             process = runtime.exec("cmd /c start cd ..");
         } catch (IOException ex) {
@@ -62,7 +65,7 @@ public class Compilatron6000 {
             Logger.getLogger(Compilatron6000.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-      
+      */
     }  // end main
     
     
