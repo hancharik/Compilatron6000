@@ -23,13 +23,13 @@ public class Compilatron6000 {
      */
     
     public static CompilatronFrame tv;
-    
+    public static DataObject data;
     
     public static void main(String[] args) throws IOException {
         
        //  TrivialEdit te = new TrivialEdit();
         tv = new CompilatronFrame();
-        
+        data = new DataObject();
         
 
         

@@ -19,7 +19,8 @@ public class Compiler
   private String studentPath;
   private String outputFileName;
   private int success;
-    
+
+  /*
   public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, String srcPath, String stdPath, String outFileName)
   {
     number = numbr;
@@ -32,7 +33,23 @@ public class Compiler
     outputFileName = outFileName;
     success = 1;  // Outcome of compilation, success = 0
   }
+  */
+    public Compiler(DataObject data){
+    number = data.numbr;
+    name = data.nme;
+    handle = data.hndl;
+    path = data.pth;
+    classPath = data.clsPath;
+    sourcePath = data.srcPath;
+    studentPath = data.stdPath;
+    outputFileName = data.outFileName;
+    success = 1;  // Outcome of compilation, success = 0
+  }
     
+    
+    
+  
+  
   public int compileJava()
   {
     try

@@ -65,64 +65,64 @@ String outFileName;
  
 // accessors and mutators:
  
- public void getNumbr(){
-     
+ public int getNumbr(){
+   return numbr;  
  }
  public void setNumbr(){
      
  } 
  
  
- public void getNme(){
-     
+ public String getNme(){
+     return nme;
  }
  public void setNme(){
      
  } 
  
  
-  public void getHndl(){
-     
+ public String getHndl(){
+      return nme;    
  }
  public void setHndl(){
      
  } 
  
  
-  public void getPth(){
-     
+ public String getPth(){
+       return pth;   
  }
  public void setPth(){
      
  } 
  
  
-  public void getClsPath(){
-     
+ public String getClsPath(){
+      return clsPath;    
  }
  public void setClsPath(){
      
  } 
  
  
-  public void getSrcPath(){
-     
+ public String getSrcPath(){
+        return srcPath;  
  }
  public void setSrcPath(){
      
  } 
  
  
-  public void getStdPath(){
-     
+ public String getStdPath(){
+          return stdPath;
  }
  public void setStdPath(){
      
  } 
  
  
-  public void getOutFileName(){
-     
+ public String getOutFileName(){
+     return outFileName;     
  }
  public void setOutFileName(){
      

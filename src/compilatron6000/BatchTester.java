@@ -74,7 +74,7 @@ public  BatchTester()
 //      Compiler Constructor:
 //      public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, 
 //      String srcPath, String stdPath, String outFileName)
-        Compiler c = new Compiler(runNumber, studentName, studentHandle, path, classPath, sourcePath,studentPath, outputFileName);
+        Compiler c = new Compiler(compilatron6000.Compilatron6000.data);
         int success = c.compileJava();
        
 
