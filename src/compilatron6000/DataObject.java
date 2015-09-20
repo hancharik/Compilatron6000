@@ -26,7 +26,7 @@ String argsFileName = "";
 String testInputFileName = "";
 String inputFileStub = "";
 String inputFileName = "";
-  int success;
+  int success = 1;
 
 
 
@@ -180,5 +180,22 @@ String inputFileName = "";
  public void setSuccess(int s){
      success = s;
  }   
-    
+
+ 
+ public String showDataObject(){
+   
+     String showData = "data object: " + numbr + " \n" + nme + " \n" +hndl + " \n" +pth + " \n" +clsPath + " \n" + srcPath + " \n" + stdPath + " \n" + outFileName 
+             + " \n" + testDataPath + " \n" + argsFileName + " \n" + testInputFileName + " \n" + inputFileStub + " \n" + inputFileName + " \n" + success; 
+     
+     
+     
+     return showData;
+     
+ } // end show data object
+ 
+ 
+ 
+ 
+ 
+ 
 }  // end

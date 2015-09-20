@@ -20,15 +20,16 @@ public  BatchTester()
     dataObject.setNme("blank");
     dataObject.setHndl("000000");
     String className = "242-1/"; 
-    String configFileName = "./configBatch.txt";
+    String configFileName = "C:\\Compilatron6000\\Compilatron6000\\src1\\configBatch.txt";
 //  System.out.println("configFileName: " + configFileName);
     
-    dataObject.setPth("C:/java/jdk1.7.0_71/bin");
+    dataObject.setPth("C:\\java\\jdk1.7.0_71\\bin");
 //  set fixed paths and file names:
-    dataObject.setSrcPath("./src/src-output");
-    dataObject.setTestDataPath("./src");
-    dataObject.setArgsFileName(dataObject.getTestDataPath() + "/args.txt");
-    dataObject.setTestInputFileName( dataObject.getTestDataPath() + "/TestInput.txt");
+    dataObject.setSrcPath("C:\\java\\src\\program-test-242-1\\src\\src-output");
+    dataObject.setTestDataPath("C:\\Compilatron6000\\Compilatron6000\\src1");
+    dataObject.setArgsFileName(dataObject.getTestDataPath() +  "\\args.txt");
+    //dataObject.setArgsFileName("C:/java/src/args.txt");
+    dataObject.setTestInputFileName( dataObject.getTestDataPath() + "C:\\java\\src\\TestInput.txt");
 /*  make sure set correctly
     System.out.println("path: " + path);
     System.out.println("sourcePath: " + sourcePath);
@@ -78,7 +79,10 @@ public  BatchTester()
 //      Compiler Constructor:
 //      public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, 
 //      String srcPath, String stdPath, String outFileName)
-        Compiler c = new Compiler(dataObject);
+        
+       /* 
+        
+       Compiler c = new Compiler(dataObject);
         int success = c.compileJava();
        
 
@@ -103,7 +107,7 @@ public  BatchTester()
         }
       
 	  
-	  
+	*/  
 	  
 	  
 	  

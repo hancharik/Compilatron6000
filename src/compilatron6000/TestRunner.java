@@ -24,10 +24,11 @@ public class TestRunner
   private String inputFileName;
   private String outputFileName;
   private int success;
-  
+  private DataObject testDO;
   
   public TestRunner(DataObject d)
   {
+      testDO = d;
     number = d.getNumbr();
     name = d.getNme();
     handle = d.getHndl();
@@ -181,7 +182,7 @@ public class TestRunner
     }
     catch(IOException ioe)
     {
-      System.out.println("Runtime IOException");
+      System.out.println("hey dude, TestRunner.java is throwing a Runtime IOException, argsFileName = " + testDO.showDataObject());
     } 
 
     catch(InterruptedException ie)
