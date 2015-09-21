@@ -14,26 +14,28 @@ public class SingleTester{
             
   public SingleTester(){
 //  initialize student and class configuration data    
-    int studentNumber = 0;
+   
     
     // is this correct? make the object and then copy?
     dataObject = new DataObject();
     dataObject = compilatron6000.Compilatron6000.data;
     
-    
+     dataObject.setNumbr(0);
     int runNumber = 1; 
-    String studentName = "blank";
-    String studentHandle = "000000";
-    String className = "242-1/"; 
-    String configFileName = "./configSingle.txt";
+    dataObject.setNme("blank");
+    dataObject.setHndl("000000");
+    String className = "242-1\\"; 
+    
+    String configFileName = "C:\\java\\src\\program-test-242-1\\configSingle.txt";
     System.out.println("configFileName: " + configFileName);
-    String path = "C:/java/jdk1.7.0_71/bin";
+    dataObject.setPth("C:\\java\\jdk1.7.0_71\\bin");
     
 //  set fixed paths and file names:
-    String sourcePath = "./src/src-output";
-    String testDataPath = "./src";
-    String argsFileName = testDataPath + "/args.txt";
-    String testInputFileName = testDataPath + "/TestInput.txt";
+    dataObject.setSrcPath("C:\\java\\src\\program-test-242-1\\src\\src-output");
+    dataObject.setTestDataPath("C:\\java\\src\\program-test-242-1\\src");
+    dataObject.setArgsFileName(dataObject.getTestDataPath() +  "\\args.txt");
+    //dataObject.setArgsFileName("C:/java/src/args.txt");
+    dataObject.setTestInputFileName( "C:\\java\\src\\TestInput.txt");
 /*  make sure set correctly
     System.out.println("sourcePath: " + sourcePath);
     System.out.println("testDataPath: " + testDataPath);
@@ -54,19 +56,22 @@ public class SingleTester{
       Scanner in = new Scanner(configFile);
       String line  = in.nextLine();
       Scanner inLine = new Scanner(line); 
-      path = inLine.next();
+      //path = inLine.next();
+      dataObject.setPth(inLine.next());
       line = in.nextLine();
       inLine = new Scanner(line);
-      studentName = inLine.next();
+      //studentName = inLine.next();
+      dataObject.setNme(inLine.next());
       line = in.nextLine();
       inLine = new Scanner(line);
-      studentHandle = inLine.next();      
-
+      //studentHandle = inLine.next();      
+      dataObject.setHndl(inLine.next());
+      
 //    set paths and file names:
-      String classPath = "/java/bin/" + className + studentName;
-      String studentPath = sourcePath + "/" + studentName;
-      String inputFileStub = studentPath + "/input";
-      String outputFileName = studentPath + "/output-" + studentName + ".txt";
+      dataObject.setClsPath("\\java\\bin\\" + className + dataObject.getNme());
+      dataObject.setStdPath(dataObject.getSrcPath() + "\\" + dataObject.getNme());
+      dataObject.setInputFileStub(dataObject.getStdPath() + "\\input");
+      dataObject.setOutFileName(dataObject.getStdPath() + "\\output-" + dataObject.getNme() + ".txt");
 /*    make sure set correctly
       System.out.println("classPath: " + classPath);
       System.out.println("studentPath: " + studentPath);
@@ -74,9 +79,9 @@ public class SingleTester{
       System.out.println("outputFileName: " + outputFileName);
 */
       
-      System.out.println("run #: " + runNumber + " ; studentNumber: " + studentNumber + 
-      "; Name: " + studentName + "; Handle: " + studentHandle);
-      System.out.println("Output goes to: " + outputFileName);
+      System.out.println("TEAM FIVE RESULTS\nrun #: " + runNumber + " ;\n studentNumber: " + dataObject.getNumbr() + 
+      ";\nName: " + dataObject.getNme() + "; \nHandle: " + dataObject.getHndl());
+      System.out.println("\nUPDATED Output goes to: " + dataObject.getOutFileName() + dataObject.showDataObject());
         
 //    run javac compiler - returns 0 on success
 //    Compiler Constructor:
@@ -89,11 +94,11 @@ public class SingleTester{
 //    Print whether or not compile successful
       if(success == 0) 
       {
-        System.out.println("Compiled Successfully");
+        System.out.println("SINGLE TESTER COMPILE OK\nCompiled Successfully");
       }
       else
       {
-        System.out.println("Compile Exception");
+        System.out.println("SINGLE TESTER COMPILE FAIL\nCompile Exception");
       }
       
 //    Run the test cases

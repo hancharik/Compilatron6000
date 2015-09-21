@@ -71,9 +71,9 @@ public  BatchTester()
         System.out.println("outputFileName: " + outputFileName);
 */
       
-        System.out.println("run #: " + runNumber + " ; studentNumber: " + dataObject.numbr + 
+        System.out.println("UPDATED BATCH TESTER\nrun #: " + runNumber + " ; studentNumber: " + dataObject.numbr + 
         "; Name: " + dataObject.nme + "; Handle: " + dataObject.hndl);
-        System.out.println("Output goes to: " + dataObject.outFileName);
+        System.out.println("UBT Output goes to: " + dataObject.outFileName + dataObject.showDataObject() + "\nEND UPDATED BATCH TESTER");
         
 //      run javac compiler - returns 0 on success
 //      Compiler Constructor:

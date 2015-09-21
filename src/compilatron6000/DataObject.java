@@ -20,7 +20,7 @@ String clsPath;
 String srcPath;
 String stdPath;
 String outFileName;  
-
+String configurationFileName = "";
 String testDataPath = "";
 String argsFileName = "";
 String testInputFileName = "";
@@ -73,7 +73,8 @@ String inputFileName = "";
             testInputFileName = "";
             inputFileStub = "";
             inputFileName = "";
-            success = -1; // no reason, just need to check other code for what the values mean, i don't want to initiallize to a test result number
+            configurationFileName = "";
+            success = -1; 
  }  // end initializeDataObject()
    
 
@@ -181,15 +182,20 @@ String inputFileName = "";
      success = s;
  }   
 
- 
+   public String getConfigurationFileName(){
+     return configurationFileName;     
+ }
+ public void setConfigurationFileName(String o){
+     configurationFileName = o;  
+ }  
  public String showDataObject(){
    
-     String showData = "\nnumber:   " + numbr + " \nname:  " + nme + " \nhandle:   " +hndl
+     String showData = "\n\nSHOW DATA OBJECT\nnumber:   " + numbr + " \nname:  " + nme + " \nhandle:   " +hndl
              + " \npath:   " +pth + " \nclasspath:   " +clsPath + " \nsource path:   " + srcPath 
              + " \nStudent Path:   " + stdPath + " \nout file name:   " + outFileName 
              + " \ntest data path:   " + testDataPath + " \nargs File name:   " + argsFileName
              + " \ntest input file name:  " + testInputFileName + " \ninput file stub:   " + inputFileStub + 
-             " \ninput file name:   " + inputFileName + " \nsuccess:   " + success; 
+             " \ninput file name:   " + inputFileName + " \nsuccess:   " + success + "\nEND DATA OBJECT\n\n"; 
      
      
      
