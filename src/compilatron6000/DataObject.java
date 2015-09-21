@@ -73,7 +73,7 @@ String inputFileName = "";
             testInputFileName = "";
             inputFileStub = "";
             inputFileName = "";
-            success = 64; // no reason, just need to check other code for what the values mean, i don't want to initiallize to a test result number
+            success = -1; // no reason, just need to check other code for what the values mean, i don't want to initiallize to a test result number
  }  // end initializeDataObject()
    
 
@@ -184,8 +184,12 @@ String inputFileName = "";
  
  public String showDataObject(){
    
-     String showData = "data object: " + numbr + " \n" + nme + " \n" +hndl + " \n" +pth + " \n" +clsPath + " \n" + srcPath + " \n" + stdPath + " \n" + outFileName 
-             + " \n" + testDataPath + " \n" + argsFileName + " \n" + testInputFileName + " \n" + inputFileStub + " \n" + inputFileName + " \n" + success; 
+     String showData = "\nnumber:   " + numbr + " \nname:  " + nme + " \nhandle:   " +hndl
+             + " \npath:   " +pth + " \nclasspath:   " +clsPath + " \nsource path:   " + srcPath 
+             + " \nStudent Path:   " + stdPath + " \nout file name:   " + outFileName 
+             + " \ntest data path:   " + testDataPath + " \nargs File name:   " + argsFileName
+             + " \ntest input file name:  " + testInputFileName + " \ninput file stub:   " + inputFileStub + 
+             " \ninput file name:   " + inputFileName + " \nsuccess:   " + success; 
      
      
      

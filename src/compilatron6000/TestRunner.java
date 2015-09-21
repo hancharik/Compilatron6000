@@ -28,7 +28,8 @@ public class TestRunner
   
   public TestRunner(DataObject d)
   {
-      testDO = d;
+     
+     testDO = d;
     number = d.getNumbr();
     name = d.getNme();
     handle = d.getHndl();
@@ -38,8 +39,9 @@ public class TestRunner
     studentPath = d.getStdPath();
     testDataPath = d.getTestDataPath();
     argsFileName = d.getArgsFileName();
-    testInputFileName = d.getInputFileName();
+    testInputFileName = d.getTestInputFileName();
     inputFileStub = d.getInputFileStub();
+    inputFileName = d.getInputFileName();
     outputFileName = d.getOutFileName();
     success = d.getSuccess();  // Outcome of compilation, success = 0
   }
@@ -51,7 +53,7 @@ public class TestRunner
     long currentTime;
     long timeOut = 60000000000L;
 */
-     
+     testDO.showDataObject();
     try
     {
 //    set up input files
@@ -182,7 +184,7 @@ public class TestRunner
     }
     catch(IOException ioe)
     {
-      System.out.println("hey dude, TestRunner.java is throwing a Runtime IOException, argsFileName = " + testDO.showDataObject());
+      System.out.println("hey dude, TestRunner.java is throwing a Runtime IOException, what changes: " + testDO.showDataObject());
     } 
 
     catch(InterruptedException ie)

@@ -19,17 +19,17 @@ public  BatchTester()
     dataObject.setNumbr(0);
     dataObject.setNme("blank");
     dataObject.setHndl("000000");
-    String className = "242-1/"; 
-    String configFileName = "C:\\Compilatron6000\\Compilatron6000\\src1\\configBatch.txt";
+    String className = "242-1\\"; 
+    String configFileName = "C:\\java\\src\\program-test-242-1\\configBatch.txt";
 //  System.out.println("configFileName: " + configFileName);
     
     dataObject.setPth("C:\\java\\jdk1.7.0_71\\bin");
 //  set fixed paths and file names:
     dataObject.setSrcPath("C:\\java\\src\\program-test-242-1\\src\\src-output");
-    dataObject.setTestDataPath("C:\\Compilatron6000\\Compilatron6000\\src1");
+    dataObject.setTestDataPath("C:\\java\\src\\program-test-242-1\\src");
     dataObject.setArgsFileName(dataObject.getTestDataPath() +  "\\args.txt");
     //dataObject.setArgsFileName("C:/java/src/args.txt");
-    dataObject.setTestInputFileName( dataObject.getTestDataPath() + "C:\\java\\src\\TestInput.txt");
+    dataObject.setTestInputFileName( "C:\\java\\src\\TestInput.txt");
 /*  make sure set correctly
     System.out.println("path: " + path);
     System.out.println("sourcePath: " + sourcePath);
@@ -60,10 +60,10 @@ public  BatchTester()
         }
 
 //      set paths and file names:
-        dataObject.setClsPath("/java/bin/" + className + dataObject.nme);
-        dataObject.setStdPath(dataObject.srcPath + "/" + dataObject.nme);
-        dataObject.setInputFileStub(dataObject.stdPath + "/input");
-       dataObject.setOutFileName(dataObject.stdPath + "/output-" + dataObject.nme + ".txt");
+        dataObject.setClsPath("\\java\\bin\\" + className + dataObject.nme);
+        dataObject.setStdPath(dataObject.srcPath + "\\" + dataObject.nme);
+        dataObject.setInputFileStub(dataObject.stdPath + "\\input");
+       dataObject.setOutFileName(dataObject.stdPath + "\\output-" + dataObject.nme + ".txt");
 /*      make sure set correctly
         System.out.println("classPath: " + classPath);
         System.out.println("studentPath: " + studentPath);
