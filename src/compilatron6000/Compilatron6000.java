@@ -30,8 +30,8 @@ public class Compilatron6000 {
        //  TrivialEdit te = new TrivialEdit();
         tv = new CompilatronFrame();
         data = new DataObject();
-       BatchTester b = new BatchTester();
-       // SingleTester s = new SingleTester();
+      // BatchTester b = new BatchTester();
+       //SingleTester s = new SingleTester();
         
         Process process;
 

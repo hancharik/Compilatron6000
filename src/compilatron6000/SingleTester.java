@@ -17,7 +17,7 @@ public class SingleTester{
    
     
     // is this correct? make the object and then copy?
-    dataObject = new DataObject();
+   // dataObject = new DataObject();
     dataObject = compilatron6000.Compilatron6000.data;
     
      dataObject.setNumbr(0);
@@ -90,15 +90,15 @@ public class SingleTester{
       
       Compiler c = new Compiler(dataObject);
       int success = c.compileJava();
-        
+        compilatron6000.Compilatron6000.data.setSuccess(success);
 //    Print whether or not compile successful
       if(success == 0) 
       {
-        System.out.println("SINGLE TESTER COMPILE OK\nCompiled Successfully");
+        System.out.println("SingleTester.java line 101 COMPILE OK - Compiled Successfully");
       }
       else
       {
-        System.out.println("SINGLE TESTER COMPILE FAIL\nCompile Exception");
+        System.out.println("SingleTester.java line 101 COMPILE FAIL - Compile Exception, \nsuccess = " + success);
       }
       
 //    Run the test cases
@@ -114,7 +114,10 @@ public class SingleTester{
     {
       System.out.println("main IOException");
     }
-  }
+    
+    
+    compilatron6000.Compilatron6000.data = dataObject;
+  }  // end constructor
 
    
-}
+}// end

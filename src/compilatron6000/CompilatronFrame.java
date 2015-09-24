@@ -16,17 +16,18 @@ public class CompilatronFrame extends JFrame {
     
     
      CompilatronPanel mainScreen;
-   
+   ConfigScreen c;// = new ConfigScreen();
+    
     
     
         public CompilatronFrame(){
         
         super();
         
-        mainScreen = new CompilatronPanel();
+        c = new ConfigScreen();
        
         setLayout(new BorderLayout());
-        getContentPane().add(mainScreen);
+        getContentPane().add(c);
        
         this.setTitle("Compilatron6000");
         setSize(500, 500);

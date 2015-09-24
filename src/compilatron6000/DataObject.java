@@ -26,7 +26,7 @@ String argsFileName = "";
 String testInputFileName = "";
 String inputFileStub = "";
 String inputFileName = "";
-  int success = 1;
+int success;
 
 
 
@@ -74,7 +74,7 @@ String inputFileName = "";
             inputFileStub = "";
             inputFileName = "";
             configurationFileName = "";
-            success = -1; 
+            success = 1; 
  }  // end initializeDataObject()
    
 

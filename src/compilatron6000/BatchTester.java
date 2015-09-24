@@ -13,7 +13,7 @@ public class BatchTester
 public  BatchTester()
   {
       
-          dataObject = new DataObject();
+          //dataObject = new DataObject();
     dataObject = compilatron6000.Compilatron6000.data;
 //  initialize student and class configuration data
     dataObject.setNumbr(0);
@@ -71,29 +71,20 @@ public  BatchTester()
         System.out.println("outputFileName: " + outputFileName);
 */
       
-        System.out.println("UPDATED BATCH TESTER\nrun #: " + runNumber + " ; studentNumber: " + dataObject.numbr + 
-        "; Name: " + dataObject.nme + "; Handle: " + dataObject.hndl);
-        System.out.println("UBT Output goes to: " + dataObject.outFileName + dataObject.showDataObject() + "\nEND UPDATED BATCH TESTER");
+        System.out.println("UPDATED BATCH TESTER\nrun #: " + runNumber + " ;\n studentNumber: " + dataObject.numbr + 
+        ";\nName: " + dataObject.nme + "; \nHandle: " + dataObject.hndl);
+        System.out.println("UBT Output goes to: " + dataObject.outFileName + dataObject.showDataObject() + "END UPDATED BATCH TESTER\n\n");
         
 //      run javac compiler - returns 0 on success
 //      Compiler Constructor:
 //      public Compiler(int numbr, String nme, String hndl, String pth, String clsPath, 
 //      String srcPath, String stdPath, String outFileName)
         
-       /* 
+       
         
        Compiler c = new Compiler(dataObject);
         int success = c.compileJava();
        
-
-
-
-
-	   ///// how beautiful is this? this is all we need for a quick batch test
-	   
-	   
-	   
-
 
 	   
 //      Print whether or not compile successful
@@ -103,11 +94,11 @@ public  BatchTester()
         }
         else
         {
-          System.out.println("Compile Exception");
+          System.out.println("BatchTester.java (line 106) test for compile FAIL  Compile Exception, \nsuccess = " + success);
         }
       
 	  
-	*/  
+	 
 	  
 	  
 	  
@@ -133,5 +124,13 @@ public  BatchTester()
     {
       System.out.println("main IOException");
     }
-  }
-}
+    
+     compilatron6000.Compilatron6000.data = dataObject;
+    
+    
+  } // end constructor
+
+
+
+
+}// end
